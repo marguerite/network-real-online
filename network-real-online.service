@@ -1,0 +1,10 @@
+[Unit]
+Description=Release until the network is really reachable
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/network-real-online
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
